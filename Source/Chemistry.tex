@@ -1,0 +1,249 @@
+\begin{quotation}
+``\emph{不是Balard发现了溴，而是溴发现了Balard。}''
+
+{\ttfamily ``Balard did not discover bromine, rather bromine \\
+discovered Balard.''
+\\--- Justus von Liebig}
+
+``\emph{我们把有机化学定义为碳的化合物的化学。}''
+
+{\ttfamily ``We define organic chemistry as the chemistry of \\
+carbon compounds.''
+\\ --- August Kekule}
+
+{\ttfamily ``Chem is try''
+\\ --- Anonymous}
+\end{quotation}
+
+\section{怎么表示有机化合物？}
+当我们想谈论关于一个有机化合物时，我们要让别人明白我们指的是哪个，于是表示有机化合物的方式就很重
+要，它们就像名字一样。不过很多方式除了有名字的作用之外，还能直观的展示一些它们的特点。
+
+\subsection{用式子表示有机化合物}
+常用的几种用式子表示有机化合物的方法有：
+\begin{enumerate}
+\item 名称
+\item 化学式
+\item 结构式
+\item 结构简式
+\item 键线式
+\end{enumerate}
+
+\paragraph{名称}
+名称没什么好说的，比如甲烷，乙酸，乙二酸，硝基苯。名称对应的化合物一般是唯一的，但是一个化合物却不一
+定只有一个名称。比如氢氧化钠(\chemfig{NaOH})又叫烧碱，乙酸(\chemfig{CH_3COOH})又叫醋酸。
+
+\paragraph{化学式}
+化学式展示了组成该化合物的所有原子及其数目（或比例），但无法体现化学键。只要按一定的顺序写出各个原
+子，并把它们的数目标在右下角就是化学式中的分子式，比如\chemfig{C_6H_6}, \chemfig{C_2H_6O}。
+写比例（最简整数比）的是实验式，在某些问题上很有用。可以有多种的化合物的化学式相同，这导致了同分异构
+体的出现，我们会在后来简要提及它。
+
+\paragraph{结构式}
+结构式是用短线(\chemfig{-})等表示化学键，连接起元素符号代表的元素的一种化学组成式。它能表示出化
+合物的化学键，元素组成，以及一定的空间结构。几个例子：
+\begin{center}
+甲烷: \chemfig{H-C(-[2]H)(-[6]H)-H},
+乙酸: \chemfig{H-C(-[2]H)(-[6]H)-C(=[2]O)-O-H}。
+\end{center}
+
+\paragraph{结构简式}
+在结构式中的碳氢键常常很多，比较麻烦。于是人们常常使用结构简式 --- 省去了碳氢键\footnote{有
+时也省去氧氢键等常用键。}的结构式来表示有机化合物。比如1-丙醇可被简化为
+\begin{center}
+\chemfig{OH-CH_2-CH_2-CH_3}
+\end{center}
+
+\paragraph{键线式}
+键线式进一步简化了结构式，把碳骨架上C, H的元素符号也省去了。注意书写键线式时只能省略碳骨架上的H。
+例子：
+\begin{center}
+正己烷：\chemfig{-[:30]-[:-30]-[:30]-[:-30]-[:30]-[:-30]}\\
+3-戊烯酸：\chemfig{-[:30]=[:-30]-[:30]-[:-30](=[6]O)-[:30]OH}
+\end{center}
+
+\subsection{用模型表示有机化合物}
+模型能很好地展示有机化合物的各原子的相对大小，空间组成。常用的模型有球棍模型，填充模型等。
+球棍模型把原子做成小球，用棍子按空间组成插在一起。可以从中看出空间结构，原子相对大小，但是难以看出
+相对距离。填充模型是把整个分子按比例放大，其中的原子近似为球状，比较容易看出相对距离和分子相对大
+小，但是空间结构比较难看出来（相对球棍模型）。
+
+
+\section{链烃（脂肪烃）的性质}
+链烃中的C原子不连成环。比如甲烷(\chemfig{CH4}),乙烯(\chemfig{CH2=CH2})，\\
+丙炔(\chemfig{CH~C-CH3})等都是链烃。
+
+虽然这一节是讲链烃，但我们也同时提一下环烃，它们的C原子连成环。而环烃还可细分成芳香烃和脂环烃。
+\textbf{芳香烃是含有苯环的环烃}，
+\begin{center}
+苯: \chemfig{*6(-=-=-=)} 或 \chemfig{**6(------)}
+\end{center}
+本身也属于它。前者是苯的凯库勒式，凯库勒认为苯环是单双键交替的环。虽然现代化学已经证明了苯不是这样
+的，它的C之间有更复杂的化学键，但凯库勒富有创造力和想象力的凯库勒式极大地推进了该领域的发展。现在
+认为苯的C由单键和跨越整个环的大$\pi$键相连。
+
+\subsection{链烃的结构特点}
+\textbf{烷烃是C原子间全部以饱和键（单键）相连的链烃}\emph{或甲烷}。
+
+% 'n' in math mode cannot be written into right footers in chemfig, 
+% so we use 'n' without '$'.
+当C原子数n大于等于3时，中间的每个C要与2个C相连，每个C上只能有2个H，而两边的C上有3个H，故此时
+烷烃的化学式为\chemfig{C_{n}H_{2n+2}}。
+
+很易证明，当n=1,n=2时这化学式仍然成立。故烷烃的化学通式为\\
+\chemfig{C_{n}H_{2n+2}}。
+
+\textbf{烯烃是C原子间有双键的链烃}。
+
+很易看出，单烯烃的通式为\chemfig{C_{n}H_{2n}}。
+
+\textbf{炔烃是C原子间有三键的链烃}。
+
+很易看出，单炔烃的通式为\chemfig{C_{n}H_{2n-2}}。
+
+\subsection{链烃的性质}
+由于不饱和键的存在，烯烃，炔烃与烷烃的化学性质有着较大的差别。前两者能发生很多后者不能的反应，比如
+加成反应等。而很多东西都能与烯烃，炔烃加成，比如卤素单质，水等。这使得用类似溴水的东西区分它们成为
+可能。另外，酸性高锰酸钾能够氧化这样的不饱和键，所以也可以用酸性高锰酸钾来区分它们。
+
+它们的化学性质区别还体现在很多不同的方面。甚至不止是化学性质，它们的一些物理性质（如熔沸点）也有显
+著的不同。表\ref{table:attributesOfHydrocarbon} 展示了烷烃和烯烃，炔烃的主要化学性质区别。
+
+\subsubsection{链烃的化学性质}
+\begin{table}[!hbpt]
+\begin{center}
+\begin{tabular}{p{2cm}|p{2cm}|p{3cm}|p{3cm}|}
+ & 烷烃 & 烯烃 & 炔烃 \\
+\hline
+活动性 & 较稳定 & 比烷烃活泼 & 较活泼 \\
+\hline
+取代反应 & 能够与卤素取代 & \multicolumn{2}{c|}{高中不涉及} \\
+\hline 
+加成反应 & 不能发生 & 
+\multicolumn{2}{p{5cm}|}{能与\chemfig{H_2}, \chemfig{X_2}, \chemfig{HX}, 
+\chemfig{H_2O}, \chemfig{HCN}等加成} \\ \hline
+燃烧 & 产生淡蓝色火焰 & 火焰明亮，有黑烟 & 火焰明亮，有浓烟\\
+\hline
+与酸性高锰酸钾 & 不反应 & \multicolumn{2}{c|}{使它退色} \\
+\hline
+加聚反应 & 不能发生 & \multicolumn{2}{c|}{能发生} \\
+\hline
+鉴别 & \multicolumn{3}{|c|}{可用溴水，酸性高锰酸钾鉴别} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{烷烃和烯烃，炔烃的主要化学性质区别}
+\label{table:attributesOfHydrocarbon}
+\end{table}
+
+\subsubsection{链烃的物理性质}
+链烃的物理性质随C原子数n的增加呈现规律性变化。
+n小于5时，为气态，之后随它增加过渡到液态和固态。
+随n的增加\textbf{沸点}增加；\textbf{相对密度}增大。
+同分异构体中，支链数目越多，\textbf{沸点}越低。
+都难溶于水，易溶于有机溶剂。
+
+\subsection{涉及链烃的化学反应}
+
+\subsubsection{涉及烷烃的化学反应}
+由于烷烃的化学键键能很高，导致其能发生的化学反应比较少。
+一般见得最多的是取代反应 (如甲烷与氯气)：
+\begin{center}
+\schemestart 
+\chemfig{CH_4} \+ \chemfig{Cl_2} 
+\arrow{->[$h\nu$]}
+\chemfig{CH_3Cl} \+ \chemfig{HCl} 
+\schemestop
+\end{center}
+要注意的是这化学反应方程式中只出现了一种主要产物，这是因为
+\begin{center}
+\schemestart 
+\chemfig{CH_3Cl} \+ \chemfig{Cl_2} 
+\arrow{->[$h\nu$]}
+\chemfig{CH_2Cl_2} \+ \chemfig{HCl} 
+\schemestop
+\end{center}
+事实上该反应产生很多种副产物，所以该反应一般不被用于工业生产。
+
+烷烃的裂解在断裂碳碳键的同时，还要断裂碳氢键生成碳碳双键。网课中给的例子是：丁烷的裂解
+\begin{center}
+\schemestart
+\chemfig{C_4H_{10}} \arrow{->[高温]} 
+\chemfig{CH_4} \+ \chemfig{CH_2=CH-CH_3}
+\schemestop
+\end{center}
+\begin{center}
+\schemestart
+\chemfig{C_4H_{10}} \arrow{->[高温]} 
+\chemfig{C_2H_6} \+ \chemfig{CH_2=CH_2}
+\schemestop
+\end{center}
+
+点燃时，通式为
+\begin{center}
+\schemestart
+\chemfig{C_{n}H_{2n+2}} \+ $\frac{3\text{n} + 1}{2}$\chemfig{O_2}
+\arrow{->[点燃]} n\chemfig{CO_2} \+ (n + 1)\chemfig{H_2O}
+\schemestop
+\end{center}
+
+\subsubsection{涉及烯烃的化学反应}
+烯烃中的碳碳双键可以发生加成反应，可以和卤素，水等物质加成。
+这两个反应方程式如下：
+\begin{center}
+\schemestart
+\chemfig{=[:30]-[:-30]} \+ \chemfig{Br_2} \arrow{->}
+\chemfig{Br-[2]-[:30](-[-2]Br)-[:-30]}
+\schemestop
+\end{center}
+\begin{center}
+\schemestart
+\chemfig{=[:30]-[:-30]} \+ \chemfig{H_2O} \arrow{->[Cat]}
+\chemfig{-[:30](-[-2]OH)-[:-30]} 或 \chemfig{HO-[:30]-[:-30]-[:30]}
+\schemestop
+\end{center}
+
+它还可以发生加聚反应，如:
+\begin{center}
+\schemestart
+n\chemfig{CH_2=CH_2} \arrow{->[引发剂]}
+\chemfig{-[@{op}]CH_2-CH_2-[@{cl}]}
+\polymerdelim[height=6pt,delimiters={[]}]{op}{cl}
+\schemestop
+\end{center}
+
+碳碳双键与酸性高锰酸钾溶液反应生成的产物与两边的东西有关，这里暂不讨论，下面会有个表
+\ref{table:CHKMnO4} 详细介绍这些东西。
+
+\subsubsection{涉及炔烃的化学反应}
+加成和加聚反应方面，炔烃与烯烃很相似，这里就不提了。
+提一下与酸性高锰酸钾溶液反应，
+\begin{center}
+\schemestart
+\chemfig{CH~CH} \arrow{->[\chemfig{KMnO_4}]} \chemfig{CO_2}
+\schemestop
+\end{center}
+
+\begin{table}[!hbtp]
+\begin{center}
+\begin{tabular}{r|c}
+\hline
+被氧化的部分 & 氧化产物 \\
+\hline
+\chemfig{CH_2=} & \chemfig{CO_2}, \chemfig{H_2O} \\
+\hline
+\chemfig{RCH=} & \chemfig{R-C(=[-2]O)-OH} \\
+\hline
+\chemfig{C(-[3]R')(-[-3]R'')=} & \chemfig{C(-[3]R')(-[-3]R'')=O} \\
+\hline
+\chemfig{HC~} & \chemfig{CO_2} \\
+\hline
+\chemfig{R-C~} & \chemfig{R-COOH} \\
+\hline
+\end{tabular}
+\caption{炔烃和烯烃与酸性高锰酸钾溶液反应}
+\label{table:CHKMnO4}
+\end{center}
+\end{table}
+
+\textbf{化学到这暂时不写基础知识了，毕竟在课本上都能找到，写了意义不大。}

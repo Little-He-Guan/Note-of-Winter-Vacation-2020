@@ -1,0 +1,87 @@
+\begin{quotation}
+``自然和自然的法则在黑夜中隐藏：上帝说，`让牛顿去吧！' 于是一切都被照亮。''
+
+{\ttfamily
+\begin{sloppypar}
+``Nature and Nature's laws lay hid in night:
+God said, `Let Newton be!' and all was light.''
+\end{sloppypar}
+
+--- Alexander Pope}
+
+``物理就像性一样，它的确能带来一些有用的结果，但那不是我们为什么做它的原因。''
+
+{\ttfamily
+``Physics is like sex: sure, it may give some \\
+practical results, but that's not why 
+we do it.''
+
+--- Richard Feynman}
+
+\end{quotation}
+
+\section{光学初步}
+\subsection{光的折射定律 --- Snell定律}
+先不谈网课上的内容，来看一个课本上的例子。课本上的光的折射定律大家应该很熟悉了,
+\[
+\frac{\sin{\theta_1}}{\sin{\theta_1}} = \frac{v_1}{v_2} = \frac{n_1}{n_2}
+\]
+这个定律既可以被从费马原理\cite{FMsPrinciple}推导出来，也可以从我们课本上介绍的惠更斯原理被推
+导出来\footnote{事实上它还可以从麦克斯韦方程组，或是从能量守恒和动量守恒，或是从平移对称性原理等
+中被推导出来。然而这些推导无法被做到在中学阶段。}。
+
+\subsubsection{用费马原理推导Snell定律}
+我们先看一下用费马原理推导它。费马原理告诉我们，光线跑的路不是别的，而是用时最短的路。现在，如图
+\ref{fig:DeriveSenllsLawFromFermats}，
+我们在线两侧有两个不同的介质区域$A, B$，其中分别存在点$P, Q$，现在有光要从$P$跑到$Q$，我们尝试
+用费马原理找到它的路径。
+
+\begin{figure}[!hbpt]
+\begin{center}
+\begin{tikzpicture}
+\coordinate[label=left:{$P$}] (P) at (3,2);
+\coordinate[label=right:{$Q$}] (Q) at (-2,-3);
+\coordinate[label=above left:{$M$}] (M) at (0,0);
+
+\node[anchor=west] at (0,1.5) {$A$};
+\node[anchor=east] at (0,-1.5) {$B$};
+
+\draw[very thick] (-4,0) -- (4,0);
+\draw[dashed] (0,2.5) -- (0,-2.5);
+
+\draw[->] (P) -- (1.5,1);
+\draw (1.5,1) -- (M);
+\draw[->] (M) -- (-1,-1.5);
+\draw (-1,-1.5) -- (Q);
+
+\end{tikzpicture}
+\end{center}
+\caption{用费马原理推导Snell定律}
+\label{fig:DeriveSenllsLawFromFermats}
+\end{figure}
+
+\begin{proof}
+首先证明，光在两个介质内跑的不是别的，而是直线。首先，光无论怎么跑，都要经过分界线上的某一点M，于是
+连接$PM,PN$，显然，光跑别的路径要比它跑直线跑的更长，就得出了光要跑直线。得出路径后就好算时间了。
+设$P,Q$到分界线的距离分别为$a,b$，它们之间的水平距离为$l$，设$M,P$间的水平距离为$x$，光在$A,B$
+中的速度分别为$v_1,v_2$，
+则时间
+\begin{equation}
+t = \frac{\sqrt{a^2 + x^2}}{v_1} + \frac{\sqrt{b^2 + (l-x)^2}}{v_1}
+\end{equation}
+求导
+\begin{equation}
+\frac{\mathrm{d}t}{\mathrm{d}x} = \frac{x}{v_1\sqrt{a^2 + x^2}} + 
+\frac{-(l-x)}{v_2\sqrt{b^2 + (l-x)^2}}
+\end{equation}
+很易看出，导数零点就是极小值点。
+注意到，
+\begin{align*}
+\frac{x}{v_1\sqrt{a^2 + x^2}} &= \sin{\theta_1} \\
+\frac{(l-x)}{v_2\sqrt{b^2 + (l-x)^2}} &= \sin{\theta_2}
+\end{align*}
+，其中$\theta_1,\theta_2$分别是$PM,QM$与法线成的角。
+这就完成了证明。
+\end{proof}
+
+用惠更斯原理推导这里就不讲了。
