@@ -1,0 +1,18 @@
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=north west] at (current page.north west)
+{\includegraphics[height=0.35\paperheight]{Assets/brain.jpg}};
+\node[anchor=south east] at (current page.south east)
+{\includegraphics[width=0.5\paperwidth]{Assets/laptop.jpg}};
+
+\node[anchor=south east,rotate=15*rand] (B) at (current page.center) 
+{\Huge \textbf{\textcolor{green}{0}}};
+\node[anchor=east,rotate=15*rand] (A) at ($(B.west)+(-1.5mm,0)$)
+{\Huge \textbf{\textcolor{red}{2}}};
+\node[anchor=west,rotate=15*rand] (C) at ($(B.east)+(1.5mm,0)$)
+{\Huge \textbf{\textcolor{yellow}{2}}};
+\node[anchor=west,rotate=15*rand] (D) at ($(C.east)+(1.5mm,0)$)
+{\Huge \textbf{\textcolor{blue}{0}}};
+
+\node[anchor=north] (Title) at (current page.center) 
+{\Huge \textbf{寒假笔记}};
+\end{tikzpicture}
