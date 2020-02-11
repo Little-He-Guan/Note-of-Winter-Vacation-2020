@@ -142,8 +142,55 @@ carbon compounds.''
 
 \subsubsection{链烃的物理性质}
 链烃的物理性质随C原子数n的增加呈现规律性变化。
-n小于5时，为气态，之后随它增加过渡到液态和固态。
-随n的增加\textbf{沸点}增加；\textbf{相对密度}增大。
+图\ref{fig:ChemMPHydrocarbon}和\ref{fig:ChemDensityHydrocarbon}\\
+分别展示了部分烷烃和单
+烯烃的熔点和相对密度随碳原子数的变化而变化的图像（数据来源《人教版高中化学有机化学基础》）。
+\begin{figure}[!hbpt]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+title=熔点随碳原子数的变化,
+xlabel={碳原子数$n$},
+ylabel={熔点/\mcelsiusdeg },
+grid=major,
+legend entries={烷烃,单烯烃（1-某烯）},
+legend pos=north west
+]
+\addplot[blue,mark=square*] table {Assets/Data/Chem_MP_alkane.dat};
+\addplot[red,mark=triangle*] table {Assets/Data/Chem_MP_alkene.dat};
+
+\end{axis}
+\end{tikzpicture}
+\caption{链烃的熔点随碳原子数的变化}
+\end{center}
+\label{fig:ChemMPHydrocarbon}
+\end{figure}
+
+\begin{figure}[!hbpt]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+title=相对密度随碳原子数的变化,
+xlabel={碳原子数$n$},
+ylabel={相对密度},
+grid=major,
+legend entries={烷烃,单烯烃（1-某烯）},
+legend pos=south east
+]
+\addplot[blue,mark=square*] table {Assets/Data/Chem_density_alkane.dat};
+\addplot[red,mark=triangle*] table {Assets/Data/Chem_density_alkene.dat};
+
+\end{axis}
+\end{tikzpicture}
+\caption{链烃的相对密度随碳原子数的变化}
+\end{center}
+\label{fig:ChemDensityHydrocarbon}
+\end{figure}
+
+从图像中可以看出，
+随$n$的增加\textbf{沸点}增加；\textbf{相对密度}增大。
+
+另外，
 同分异构体中，支链数目越多，\textbf{沸点}越低。
 都难溶于水，易溶于有机溶剂。
 
@@ -207,7 +254,27 @@ n小于5时，为气态，之后随它增加过渡到液态和固态。
 \schemestop
 \end{center}
 
-它还可以发生加聚反应，如:
+在含有多个不饱和键的烃中，加成反应可能变得比较复杂，这是因为既可以是不同的不饱和键断裂并加成，也可
+能是多个不饱和键同时断裂发生加成反应，比如以下1-3-丁二烯与氯气加成的反应：
+可能是
+\begin{center}
+\schemestart
+\chemfig{=[:30]-[:-30]=[:30]} + \chemfig{Cl_2}
+\arrow{->[1,2加成]}
+\chemfig{Cl-[:30]-[:-30](-[-2]Cl)-[:30]=[:-30]}
+\schemestop
+\end{center}
+也可能是
+\begin{center}
+\schemestart
+\chemfig{=[:30]-[:-30]=[:30]} + \chemfig{Cl_2}
+\arrow{->[1,4加成]}
+\chemfig{Cl-[:30]-[:-30]=[:30]-[:-30]-[:30]Cl}
+\schemestop
+\end{center}
+
+同时，它自己之间也能发生加成反应，多个分子之间的不饱和键都断裂然后他们连在一起，这样就发生了
+加聚反应，比如：
 \begin{center}
 \schemestart
 n\chemfig{CH_2=CH_2} \arrow{->[引发剂]}
@@ -294,5 +361,79 @@ $m,n$的方程，联立它与\ref{eq:chem1}就能解出$m,n$，之后把$m,n$代
 我们来看一下，如果从三键变成单键，则两边的C原子上都多了2个H，于是能是原来三键的地方，周围的C原子
 上至少有2个H。我们看到，得到的物质中这样的地方只有一处，在中间，于是可能的结构只有一种。
 
-化学到这里就结束了。事实上，我觉得化学这个学科，至少在目前的阶段，记笔记的需求对我来说不大。我以上
-写了这么多虽然部分包含了我的一些思考，但是我写这些主要还是为了学习在\LaTeX 里编辑化学。
+\section{同分异构体}
+有机化学基础里另一个重点就是同分异构体了。一般来讲，同分异构体就是具有相同分子式但是事实上不一样的
+化合物。
+
+这种现象是十分普遍的，也是很好理解的，毕竟一个化学式包含的信息太少了，仅仅告诉了我们组成一
+个分子的原子是什么和数目是多少。所以我觉得，从本质上来看，同分异构体本身不是一种自然现象，而是人们
+表达化合物的方式不够准确所产生的。如果表达化合物的方法足够准确，用这种方式就能找到唯一确定的化合
+物，那么就不需要再讨论同分异构体。不过这不一定是一件好事，因为方法越准确，需要限定的条件就越多，
+就变得更加繁杂，另外，在很多情况下我们并不需要确定所有的条件，或者我们根本就只需要研究一类满足
+我们表示方法的化合物就好了，比如实验式经常被这么用。而在另一方面，虽然理想情况下我们很易给定限制
+一个化合物的所有条件，但在实际情况下很多时候我们不能获得关于某一化合物的所有信息而只能获得其原子
+组成方面的信息得到化学式，这就使我们不得不考虑同分异构体。
+
+\subsection{结构异构体和空间异构体}
+那么既然出现了这个问题，我们就要尝试来解决它。首先我们通过多给化合物限定条件，可以给同分异构体分分
+类。如果我们限定这些化合物都有相同的官能团，相同的化学键组成，而仅仅是空间结构上不一样，比如2-丁烯
+就因为相同原子团的空间位置不同拥有以下两种可能的结构：
+\begin{center}
+\chemfig{C(-[3]CH_3)(-[-3]H)=C(-[1]CH_3)(-[-1]H)}和
+\chemfig{C(-[3]CH_3)(-[-3]H)=C(-[1]H)(-[-1]CH_3)}
+\end{center}
+可能是因为空间异构体的不确定性，我们考试对这方面涉及很少，一般让求满足某化学式的同分异构体都是
+不考虑空间异构体。
+
+如果是因为官能团的不同、官能团位置的不同、化学键的不同等结构上的原因使得出现同分异构体的话，
+这样的同分异构体我们把它叫做结构异构体。我们在考虑结构异构体时一般不同时考虑空间异构体。即使是
+看起来更有规律可循的结构异构体也没有什么一般的方法来被确定。高中阶段我们也就研究几种，包含C原子数
+少的烷烃，苯的同系物，以及简单的不饱和烃等。
+
+\subsection{同分异构体数有公式吗？}
+然而不幸的是，即使是简单的烷烃的结构异构体数到现在也没有一个简单的公式能对所有的C原子数确定数目。
+关于这个问题的一个详细讨论，请参见\cite{NumNCarbonIsomers}
+不过，由于我们考试只需要用到C原子数很少的一部分烷烃的结构异构体数，就有一个取巧的办法，虽然我不喜
+欢这样，但是我们还是介绍下它。
+
+首先，我们能够（无论是自己计算还是去找）C原子数小于某个数的所有烷烃的结构异构体数。
+表\ref{table:NumStructuralIsomers}展示了对C原子数小于10的所有烷烃的结构异构体数。
+其次，我们对它们插值，就能得到一个对小于某个C原子数的烷烃都适用的结构异构体的公式。
+\begin{table}[!hbtp]
+\begin{center}
+\begin{tabular}{r|l}
+\hline
+碳原子数 & 结构异构体数 \\
+\hline
+4 & 2 \\
+\hline
+5 & 3 \\
+\hline
+6 & 5 \\
+\hline
+7 & 9 \\
+\hline
+8 & 18 \\
+\hline
+9 & 35 \\
+\hline
+10 & 75 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{C原子数小于10的所有烷烃的结构异构体数}
+\label{table:NumStructuralIsomers}
+\end{table}
+
+比如，对$n \leq 7$，可以插值得到一个公式比如
+\begin{equation}
+x = 2^{n-4} + 1
+\end{equation}
+这一般就够用了，只是有点取巧，但是我们现在的水平似乎除了取巧就没有什么别的简单快速的方法了...
+
+本质上讲，对烯烃和炔烃我们也可以做同样的事情，只是它们平时被考察的比较少，加上它们可能有多个不饱和
+键，要分类记好多种，记忆负担太大，这里就不再讨论了。
+
+寒假笔记化学部分到这里就结束了。事实上，我觉得化学这个学科，至少在目前的阶段，记笔记的需求对我来说、
+不大。我以上写了这么多虽然部分包含了我的一些思考，但是我写这些主要还是为了学习在\LaTeX 里编辑化
+学。
