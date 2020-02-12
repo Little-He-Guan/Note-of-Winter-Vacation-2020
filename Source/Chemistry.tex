@@ -62,16 +62,19 @@ carbon compounds.''
 3-戊烯酸：\chemfig{-[:30]=[:-30]-[:30]-[:-30](=[6]O)-[:30]OH}
 \end{center}
 
-在最后，我们想说，无论怎么表示，最终的目的是要简洁有效地让别人明白你想表达的是什么。即使是一种
-化合物，在不同的上下文下，也有很多不同的合适的表达方法。另外，不要拘泥于规则，如果有一种比已有规则
-更易懂，也不会让人产生混淆的表达方法，用它也没有什么关系。
-
 \subsection{用模型表示有机化合物}
 模型能很好地展示有机化合物的各原子的相对大小，空间组成。常用的模型有球棍模型，填充模型等。
 球棍模型把原子做成小球，用棍子按空间组成插在一起。可以从中看出空间结构，原子相对大小，但是难以看出
 相对距离。填充模型是把整个分子按比例放大，其中的原子近似为球状，比较容易看出相对距离和分子相对大
 小，但是空间结构比较难看出来（相对球棍模型）。
 
+在最后，我们想说，无论怎么表示，最终的目的是要简洁有效地让别人明白你想表达的是什么。即使是一种
+化合物，在不同的上下文下，也有很多不同的合适的表达方法。另外，不要拘泥于规则，如果有一种比已有规则
+更易懂，也不会让人产生混淆的表达方法，用它也没有什么关系。比如3-甲基-3-辛烯可以被表示为如下的式子：
+\begin{center}
+\chemfig{CH_3CH_3-[:-60,,3,]C(-[:-120,,,1]CH_3)=C(-[:-60]CH_3)-[:60]C|{(CH_3)_3}}
+\end{center}
+在它的右上角我们用到了括号，这不严格符合我们上面描述的任何一种，但是大家都明白我们是什么意思。
 
 \section{链烃（脂肪烃）的性质}
 链烃中的C原子不连成环。比如甲烷(\chemfig{CH4}),乙烯(\chemfig{CH2=CH2})，\\
@@ -162,8 +165,8 @@ legend pos=north west
 \end{axis}
 \end{tikzpicture}
 \caption{链烃的熔点随碳原子数的变化}
-\end{center}
 \label{fig:ChemMPHydrocarbon}
+\end{center}
 \end{figure}
 
 \begin{figure}[!hbpt]
@@ -183,8 +186,8 @@ legend pos=south east
 \end{axis}
 \end{tikzpicture}
 \caption{链烃的相对密度随碳原子数的变化}
-\end{center}
 \label{fig:ChemDensityHydrocarbon}
+\end{center}
 \end{figure}
 
 从图像中可以看出，
@@ -278,7 +281,7 @@ legend pos=south east
 \begin{center}
 \schemestart
 n\chemfig{CH_2=CH_2} \arrow{->[引发剂]}
-\chemfig{-[@{op}]CH_2-CH_2-[@{cl}]}
+\chemfig{-[@{op,.75}]CH_2-CH_2-[@{cl,.25}]}
 \polymerdelim[height=6pt,delimiters={[]}]{op}{cl}
 \schemestop
 \end{center}
@@ -361,6 +364,34 @@ $m,n$的方程，联立它与\ref{eq:chem1}就能解出$m,n$，之后把$m,n$代
 我们来看一下，如果从三键变成单键，则两边的C原子上都多了2个H，于是能是原来三键的地方，周围的C原子
 上至少有2个H。我们看到，得到的物质中这样的地方只有一处，在中间，于是可能的结构只有一种。
 
+(3) 写出下列各类反应，标注反应类型，并分析各类反应发生在哪些物质之间。
+\begin{center}
+\schemestart
+\chemfig{HC~CH}\arrow(bg.north east--.south west)[60]
+\chemfig{CH_3-CH_3}\arrow\chemfig{CH_3-CH_2Cl}
+\arrow(@bg.north east--.south west)[30]
+\chemfig{CH_2=CH_2}\arrow\chemfig{CH_3-CH_2Cl}
+\arrow(@bg.south east--.north west)[-30]
+\chemfig{CHBr=CHBr}\arrow\chemfig{CHBr_2-CHBr_2}
+\arrow(@bg.south east--.north west)[-75]
+\chemfig{CH_2=CHCl}\arrow(--.north west)
+\chemfig{-[@{lft,.75}]CH_2-CH(-[-2]Cl)-[@{rt,.25}]}
+\polymerdelim[height=5pt,depth=30pt,delimiters={[]}]{lft}{rt}
+\schemestop
+\end{center}
+我们来看一下，反应物有一个三键。
+对于第一行的反应的话，首先应该被\chemfig{H_2}加成（两次）生成中间产物，
+随后与氯气发生取代反应生成生成物。反应类型分别是加成、取代，加成发生在有不饱和键的物质中，而这样的
+取代C上有H的链烃应该都能发生。
+
+对于第二行的反应，也是先加成（一次）生成乙烯，然后被HCl加成生成生成物。
+反应类型分别是加成，加成，能发生的物质上面说了。
+
+对于第三行的反应，首先被溴加成，然后再被溴加成，反应类型和能发生的物质同上。
+
+第四行的反应先被HCl加成，然后自己发生加聚反应。反应类型分别是加成，加聚，
+加聚能发生的物质里，像这样有不饱和键的能发生。
+
 \section{同分异构体}
 有机化学基础里另一个重点就是同分异构体了。一般来讲，同分异构体就是具有相同分子式但是事实上不一样的
 化合物。
@@ -379,8 +410,8 @@ $m,n$的方程，联立它与\ref{eq:chem1}就能解出$m,n$，之后把$m,n$代
 类。如果我们限定这些化合物都有相同的官能团，相同的化学键组成，而仅仅是空间结构上不一样，比如2-丁烯
 就因为相同原子团的空间位置不同拥有以下两种可能的结构：
 \begin{center}
-\chemfig{C(-[3]CH_3)(-[-3]H)=C(-[1]CH_3)(-[-1]H)}和
-\chemfig{C(-[3]CH_3)(-[-3]H)=C(-[1]H)(-[-1]CH_3)}
+\chemfig{C(-[3,,,1]CH_3)(-[-3]H)=C(-[1]CH_3)(-[-1]H)}和
+\chemfig{C(-[3,,,1]CH_3)(-[-3]H)=C(-[1]H)(-[-1]CH_3)}
 \end{center}
 可能是因为空间异构体的不确定性，我们考试对这方面涉及很少，一般让求满足某化学式的同分异构体都是
 不考虑空间异构体。
@@ -396,7 +427,7 @@ $m,n$的方程，联立它与\ref{eq:chem1}就能解出$m,n$，之后把$m,n$代
 不过，由于我们考试只需要用到C原子数很少的一部分烷烃的结构异构体数，就有一个取巧的办法，虽然我不喜
 欢这样，但是我们还是介绍下它。
 
-首先，我们能够（无论是自己计算还是去找）C原子数小于某个数的所有烷烃的结构异构体数。
+首先，我们能够（无论是自己计算还是去找）得到C原子数小于某个数的所有烷烃的结构异构体数。
 表\ref{table:NumStructuralIsomers}展示了对C原子数小于10的所有烷烃的结构异构体数。
 其次，我们对它们插值，就能得到一个对小于某个C原子数的烷烃都适用的结构异构体的公式。
 \begin{table}[!hbtp]
@@ -434,6 +465,231 @@ x = 2^{n-4} + 1
 本质上讲，对烯烃和炔烃我们也可以做同样的事情，只是它们平时被考察的比较少，加上它们可能有多个不饱和
 键，要分类记好多种，记忆负担太大，这里就不再讨论了。
 
-寒假笔记化学部分到这里就结束了。事实上，我觉得化学这个学科，至少在目前的阶段，记笔记的需求对我来说、
-不大。我以上写了这么多虽然部分包含了我的一些思考，但是我写这些主要还是为了学习在\LaTeX 里编辑化
-学。
+\section{有机合成}
+我跳过了中间的醇，酚，苯的同系物，羧酸，酯等物质的基础知识部分（包括其性质，能发生的反应等）。因为
+这些东西课本上都有，再写一遍没有太大的意义。下面我们直接来看综合了所有知识的有机合成部分。
+
+\subsection{基本过程}
+有机合成的基本过程是
+\begin{enumerate}
+\item 将原料加入辅助原料后，经某种条件，得到某种中间产物，并丢弃副产物
+\item 将得到的中间产物加入对应的辅助原料，经某种条件，得到下一种中间产物，并丢弃副产物
+\item 重复过程(2)直到得到目标化合物
+\end{enumerate}
+
+即使是按照这样相同的流程也往往会出现很多种不同的有机合成路线，而根据经济性，可行性等因素找到
+最佳的有机合成路线是有机合成中的一个重要问题。
+
+\subsection{逆合成分析法}
+课本（人教版）上对逆合成分析法找有机合成路线简单的提了一下，它的原理也看起来很简单，好像就是
+根据我们学过的什么能合成它倒着猜中间产物，然而我仔细地看了课本后，觉得它并没有看起来这么简单。为什
+么呢？请注意以下几个问题：
+\begin{itemize}
+\item 在右边的资料卡中提到，``科里于1967年提出的逆合成分析原理,将有机合成路线设计艺术地变成了有
+严格思维逻辑的科学。''
+\item 它还提到，``他所提出的有机合成理论及方法，促进了有机合成化学的飞速发展，因此获得了1990年诺
+贝尔奖。''
+\end{itemize}
+
+如果这个逆合成分析真的只是根据我们学过的什么能合成它倒着猜中间产物的话，
+先不看右边的描述，首先它和正着猜的区别仅仅是正着猜原料能合成什么，反着猜目的产物能被什么合成，
+这并没有怎么改善情况。
+其次我们看描述，如果只是猜的话，这里的描述就不可能是
+``有严格思维逻辑的科学''，他也几乎不可能因为这样显然的发现``促进了有机合成化学的飞速发展，因此获得了1990年诺贝尔奖''所以我觉得他应该提出了一套严谨的逆推分析方法，只是课本上没有提而已。
+
+为了验证我的猜想，我专门上网查了下，发现果然和我想的一样，不仅有一套理论体系，包括很多概念的
+定义，比如拆解，合成子，反合成子等。还有他的五大策略等...这方面我也不懂，而且里面涉及的一些基础知识
+我现在也不知道，我就不在这里深入了。关于更多的信息，可以参考他和Xue-Min Cheng的著作
+\cite{ChemSynthesis}。
+
+\subsection{一些例题}
+让我们看一下一些例题。
+
+(1)用2-丁烯制备以下物质
+\begin{multicols}{3}
+\begin{enumerate}[label=(\alph*)]
+\item 2-氯丁烯 \item 2-丁醇 \item 2,3-二氯丁烷
+\item 2,3-丁二醇 \item 1,3-丁二烯
+\end{enumerate}
+\end{multicols}
+
+首先，对于(a)，我们发现，不饱和键消失了，应该是发生了加成反应。然而是不可能用氯气加成的，否则会出现
+(c)，所以使用HCl加成，这样(a)和(c)都被解决了。方程式如下
+\begin{center}
+\schemestart
+\chemfig{CH_3CH=CHCH_3} \+ \chemfig{HCl}
+\arrow{->[Cat][$\triangle$]} \chemfig{CH_3CHClCH_2CH_3}
+\schemestop
+\end{center}
+\begin{center}
+\schemestart
+\chemfig{CH_3CH=CHCH_3} \+ \chemfig{Cl_2}
+\arrow{->[$h\nu$]} \chemfig{CH_3CHClCHClCH_3}
+\schemestop
+\end{center}
+
+对于(b)由于它不能直接和水加成，所以我们应该分步进行。想到卤代烃可以与水发生取代反应，
+便先加成生成卤代烃然后再与水取代，对(d)也是这样。方程式如下：
+\begin{center}
+\schemestart
+\chemfig{CH_3CH=CHCH_3}\arrow{->[Cat/HCl][$\triangle$]}
+\chemfig{CH_3CHClCH_2CH_3}\arrow{->[NaOH/水][$\triangle$]}[-90]
+\chemfig{CH_3CHOHCH_2CH_3}
+\schemestop
+\end{center}
+\begin{center}
+\schemestart
+\chemfig{CH_3CH=CHCH_3}\arrow{->[\chemfig{Cl_2}][$h\nu$]}
+\chemfig{CH_3CHClCHClCH_3}\arrow{->[NaOH/水][$\triangle$]}[-90]
+\chemfig{CH_3|{(CHOH)_2}CH_3}
+\schemestop
+\end{center}
+
+对于(e)我们可以先把它卤代再消去得到两个不饱和键，或者是得到(d)\\
+后消去，不过后者要麻烦一些，所以
+我们选择前者。方程式如下：
+\begin{center}
+\schemestart
+\chemfig{CH_3CH=CHCH_3}\arrow{->[\chemfig{Cl_2}][$h\nu$]}
+\chemfig{CH_3CHClCHClCH_3}\arrow{->[NaOH/醇][$\triangle$]}[-90]
+\chemfig{CH_2=CH-CH=CH_2}
+\schemestop
+\end{center}
+
+这个例题涉及的已经有有机合成的味道了，我们的目的就是有目标地从原料合成确定的化合物。不过这些反应
+可能有些工业中不会用到或者做改良，因为副产物比较多。
+
+(2) 二乙酸-1,4-环己二醇酯可通过图\ref{fig:ChemSynthesisGraph1}所示的路线
+被合成，指出字母是什么和每一步是什么反应。
+\begin{figure}[!hbpt]
+\begin{center}
+\schemestart
+\chemfig{*6(------)}
+\arrow(.south east--.south west){->[$h\nu$][(1)]}\chemfig{Cl-[-2]*6(------)}
+\arrow(.south east--){->[NaOH/醇][$\triangle$ (2)]}[,1.5]A
+\arrow{->[\chemfig{Cl_2}][(3)]}[-90]B
+\arrow(--.north east){->[(4)]}[-180]\chemfig{*6(-=-=--)}
+\arrow(.north west--.north east){->[(5)][\chemfig{Br_2}]}[-180,1.4]
+\chemfig{Br-[:90]*6(-=-(-Br)---)}
+\arrow{->[(6)\chemfig{H_2}][Cat]}[-90]C
+\arrow{->[(7)][NaOH/水]}[,1.4]D
+\arrow{->[(8)\chemfig{H_2SO_4}][\chemfig{CH_3COOH}]}[,1.4]
+\chemfig{OOCCH_3-[:90]*6(---(-OOCCH_3)---)}
+\schemestop
+\end{center}
+\caption{二乙酸-1,4-环己二醇酯的一个合成路线}
+\label{fig:ChemSynthesisGraph1}
+\end{figure}
+
+我们来看一下，能够看出(2)的条件和反应物暗示了这应该是涉及卤代烃的消去反应，所以A应该是环己烯。
+之后(3)上有氯气，而A有双键，这意味着B应该是A与氯气加成后的产物，1,2-二氯环己烷。之后我们来到了
+C，我们看到C上有一个单键，而反应条件上有\chemfig{H_2}和Cat，这意味着C应该是前面的与氢气加成
+而被生成的于是C就是1,4-二溴环己烷，然后(7)中出现了NaOH/水，这意味着应该是卤代烃的水化，所以Br
+被羟基取代，D成为了1,4-环己二醇，最后D与乙酸发生酯化反应得到生成物也能证明这一点。
+
+(3) 某有机物A，由碳氢氧三种元素组成，在一定条件下，由A可以转化为有机物B,C,D,E，它们的转化关系如
+下图所示。在已知D的蒸汽密度（同温同压下）是氢气的22倍，且可以发生银镜反应的情况下，求：\\
+(a) 写出A,...,F的结构简式和名称，\\
+(b) 写出图中标的各个方程式，并注明反应类型
+\begin{center}
+\schemestart
+A
+\arrow(aa--bb){->[浓硫酸(I)][$\triangle$]}[30,2]B
+\arrow(--cc){<=>[醇,$\triangle$,碱(III)][HBr(II)]}[-30,2]C
+\arrow(@cc--@aa){->[水(IV)][碱]}
+\arrow(@aa--dd){<=>[(V)氧化][(VII)还原]}[-60,2]D
+\arrow(--ee){->[(VI)][氧化]}[-180]E
+\arrow(--ff){->[(VIII)]}[135,1.225]F
+\arrow(@aa--@ff)
+\schemestop
+\end{center}
+
+由于D的蒸汽密度（同温同压下）是氢气的22倍，根据理想气体状态方程
+\[
+pV=nRT
+\]
+以及密度定义，相对分子质量定义，
+我们可以得出D的相对分子质量也是氢气的22倍。而它又能发生银镜反应，
+于是在目前阶段就只有\chemfig{CH_3CHO}符合我们的条件了。
+
+我们可以看到：D被还原后生成A，而醇被氧化应该生成醛，所以A是乙醇(\chemfig{CH_3COOH})，
+方程式(V)为
+\begin{center}
+\schemestart
+2\chemfig{CH_3CH_2OH} \+ \chemfig{O_2}
+\arrow{->[Cat]}
+2\chemfig{CH_3CHO} \+ 2\chemfig{H_2O}
+\schemestop
+\end{center}
+同时，还原的方程式(VII)也出来了：
+\begin{center}
+\schemestart
+\chemfig{CH_3CHO} \+ \chemfig{H_2}
+\arrow{->[Cat][$\triangle$]}
+\chemfig{CH_3CH_2OH}
+\schemestop
+\end{center}
+
+那么醇经浓硫酸加热后应该发生消去反应，则B应该是乙烯\\
+(\chemfig{CH_2=CH_2})
+方程式(I)为
+\begin{center}
+\schemestart
+\chemfig{CH_3CH_2OH}
+\arrow{->[浓硫酸][$\triangle$]}
+\chemfig{CH_2=CH_2} \+ \chemfig{H_2O}
+\schemestop
+\end{center}
+之后B与HBr加成可以生成一溴乙烷C(\chemfig{CH_3CH_2Br})
+方程式(II)为
+\begin{center}
+\schemestart
+\chemfig{CH_2=CH_2} \+ HBr
+\arrow{->[浓硫酸][$\triangle$]}
+\chemfig{CH_3CH_2Br}
+\schemestop
+\end{center}
+卤代烃C与碱的醇溶液在加热条件下又可以发生消去反应变回来，
+方程式(III)为
+\begin{center}
+\schemestart
+\chemfig{CH_3CH_2Br}
+\arrow{->[醇,碱][$\triangle$]}
+\chemfig{CH_2=CH_2} \+ HBr
+\schemestop
+\end{center}
+之后我们发现，C还能与碱的水溶液发生取代反应再变到A，
+方程式(IV)为
+\begin{center}
+\schemestart
+\chemfig{CH_3CH_2Br} + NaOH
+\arrow{->[水][$\triangle$]}
+\chemfig{CH_3CH_2OH} \+ NaBr
+\schemestop
+\end{center}
+
+然后我们把目光移回D，我们知道，醛被氧化为羧酸，于是E是乙酸\\
+(\chemfig{CH_3COOH})
+方程式(VI)为
+\begin{center}
+\schemestart
+2\chemfig{CH_3CHO} + \chemfig{O_2}
+\arrow{->[Cat][$\triangle$]}
+2\chemfig{CH_3COOH}
+\schemestop
+\end{center}
+最后E这个羧酸与A这个醇可以发生酯化反应，F为乙酸乙酯\\
+(\chemfig{CH_3COOCH_2CH_3})
+方程式(VIII)为
+\begin{center}
+\schemestart
+2\chemfig{CH_3COOH} + \chemfig{CH_3CH_2OH}
+\arrow{<=>[浓硫酸][$\triangle$]}
+\chemfig{CH_3COOCH_2CH_3}
+\schemestop
+\end{center}
+
+\bigskip
+寒假笔记化学部分到这里就结束了。这里面考试的一些难点我没有涉及，比如利用等效氢来寻找同分异构体。
+这些笔记记得比较多的是基础知识，因为我基础知识不是很好，顺便在写的过程中巩固一下，同时也提高了我的
+\LaTeX 水平。

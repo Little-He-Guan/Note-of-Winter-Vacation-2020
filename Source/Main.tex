@@ -14,6 +14,7 @@
 \pgfplotsset{compat=1.16}
 
 \usepackage{chemfig}
+\setchemfig{scheme debug=false}
 
 \renewcommand{\headheight}{12.7pt}
 
@@ -21,8 +22,8 @@
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\emph{2020 寒假笔记}}
 \fancyfoot[C]{\textbf{\thepage}}
-\fancyfoot[L]{\emph{\textbf{作者：贺官羽铭}}}
-\fancyfoot[R]{}
+\fancyfoot[L]{\emph{贺官羽铭}}
+\fancyfoot[R]{\rightmark}
 
 % These two package are used to create enumeration in oneline,
 % to change enumeration label ...
@@ -50,6 +51,9 @@ linkcolor=blue}
 
 \newpage
 \maketitle
+\begin{center}
+\url{https://github.com/Little-He-Guan/Note-of-Winter-Vacation-2020}
+\end{center}
 
 \newpage
 \pagenumbering{Roman}
@@ -79,10 +83,6 @@ linkcolor=blue}
 \newpage
 \part{寒假化学：有机化学基础}
 \input{Chemistry.tex}
-
-\newpage
-\part{英雄联盟：如何使用信息网站League of Graphs}
-\input{lol.tex}
 
 \newpage
 \part{寒假生物：不幸牺牲}
